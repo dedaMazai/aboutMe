@@ -7,7 +7,10 @@
         "jsx": "react-jsx",
         "allowJs": true,//позволяется компилятору обработать не только ts файлы но и js
         "moduleResolution": "node",//определяется какие импорты будут (node(99% случаев) и classic)
-        // "baseUrl": ".",//Для абсолютных путей
+        "baseUrl": ".",//Для абсолютных путей
+        "paths": {
+          "*": ["./src/*"]
+        },
         "esModuleInterop": true,
         //позволяет работать с пакетами, которые используют
         //common js как с обычными пакетами с помощью import, тк (require() module.export) это common js

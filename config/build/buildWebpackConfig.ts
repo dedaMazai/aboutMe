@@ -26,7 +26,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         module: {
             rules: buildLoaders(options)//здесь конфигурируем лоудеры
         },
-        resolve: buildResolvers(),//необходимо чтобы при импорте не прописывать расширения файлов
+        resolve: buildResolvers(options),//необходимо чтобы при импорте не прописывать расширения файлов
         devtool: isDev ? 'inline-source-map' : undefined
     };
 }
