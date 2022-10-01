@@ -5,5 +5,9 @@
     "language": "Русский",
     "toggle": "Сайдбор",
     "main": "Главная",
-    "aboutSite": "О сайте"
+    "aboutSite": "О сайте",
+    "notFound": "Не найдена страница",
+    "setTheUnknownProblem": "Произошла непредвиденная ошибка",
+    "refreshSite": "Обновить страницу",
+    "throwError": "ОШИБКА"
 }

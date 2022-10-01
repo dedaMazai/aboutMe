@@ -5,5 +5,9 @@
     "language": "English",
     "toggle": "Sidebar",
     "main": "Main",
-    "aboutSite": "About Site"
+    "aboutSite": "About Site",
+    "notFound": "Not found",
+    "setTheUnknownProblem": "Set the unknown problem",
+    "refreshSite": "Refresh site",
+    "throwError": "ERROR"
 }
