@@ -2,5 +2,6 @@
     "test": "Test example",
     "translate": "Translate",
     "mainPage": "Main page",
-    "language": "English"
+    "language": "English",
+    "toggle": "Sidebar"
 }
