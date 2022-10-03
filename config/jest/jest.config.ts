@@ -3,6 +3,9 @@
  * https://jestjs.io/docs/configuration
  */
 
+// eslint-disable-next-line import/no-import-module-exports
+import path from 'path';
+
 module.exports = {
     testEnvironment: 'jsdom',
     clearMocks: true,
@@ -22,11 +25,19 @@ module.exports = {
     moduleDirectories: [
         'node_modules',
     ],
+    modulePaths: [
+        '<rootDir>src',
+    ],
     rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     testMatch: [
     // Обнаружил разницу между МАК ОС и ВИНДОУС!!! эта строка будет для обоих систем
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
 
     // All imported modules in your tests should be mocked automatically
     // automock: false,

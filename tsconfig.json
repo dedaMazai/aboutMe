@@ -9,7 +9,7 @@
         "moduleResolution": "node",//определяется какие импорты будут (node(99% случаев) и classic)
         "baseUrl": ".",//Для абсолютных путей
         "paths": {
-          "*": ["./src/*"]
+            "*": ["./src/*"]
         },
         "esModuleInterop": true,
         //позволяет работать с пакетами, которые используют
@@ -19,8 +19,13 @@
         //с этим флагом можно не использовать * as
     },
     "ts-node": {
-      "compilerOptions": {
-        "module": "CommonJS"
-      }
-    }
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "include": [
+        "./config/jest/setupTests.ts",
+        "./src/**/*.ts",
+        "./src/**/*.tsx",
+    ],
 }

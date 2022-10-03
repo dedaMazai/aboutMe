@@ -31,13 +31,14 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         if (hasError) {
         // You can render any custom fallback UI
             return (
-            <Suspense fallback="">
-                <PageError />
-            </Suspense>)
+                <Suspense fallback="">
+                    <PageError />
+                </Suspense>
+            );
         }
 
         return children;
     }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;
