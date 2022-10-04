@@ -18,6 +18,7 @@ export const PageError = ({ className }: PageErrorProps) => {
     return (
         <div className={classNames(cls.PageError, {}, [className])}>
             <p className={cls.links}>{t('setTheUnknownProblem')}</p>
+            <p className={cls.links}>{t('setTheUnknownProblem')}</p>
             <Button onClick={reloadPage} type="button">
                 {t('refreshSite')}
             </Button>
