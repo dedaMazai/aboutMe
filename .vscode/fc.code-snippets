@@ -11,7 +11,7 @@
 		"prefix": "fc",
 		"body": [
 			"import { classNames } from 'shared/lib/classNames/classNames';",
-			"import cls from './${1:${TM_FILENAME_BASE}}.module.scss'",
+			"import cls from './${1:${TM_FILENAME_BASE}}.module.scss';",
 			"",
 			"interface ${1:${TM_FILENAME_BASE}}Props {",
 				"\tclassName?: string",

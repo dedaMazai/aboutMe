@@ -10,5 +10,7 @@
     "notFound": "Не найдена страница",
     "setTheUnknownProblem": "Произошла непредвиденная ошибка",
     "refreshSite": "Обновить страницу",
-    "throwError": "ОШИБКА"
+    "throwError": "ОШИБКА",
+    "login": "Войти",
+    "modalText": "Текст модального окна"
 }

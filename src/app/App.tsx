@@ -6,10 +6,9 @@ import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
 import { PageLoader } from 'shared/ui/PageLoader';
 
-import './styles/index.scss';
-
 export const App = () => {
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
+
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback={<PageLoader />}>
