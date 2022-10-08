@@ -1,0 +1,7 @@
+node_modules
+Dockerfile
+.git/build
+.idea
+/storybook-statik
+.loki/report.html
+.loki/report.json
