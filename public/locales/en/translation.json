@@ -12,5 +12,7 @@
     "refreshSite": "Refresh site",
     "throwError": "ERROR",
     "login": "Login",
-    "modalText": "Text modal window"
+    "modalText": "Text modal window",
+    "increment": "Increment",
+    "decrement": "Decrement"
 }

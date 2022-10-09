@@ -25,6 +25,6 @@
 				"\t)",
 			"}"
 		],
-		"description": "Log output to console"
+		"description": "Create function component"
 	}
 }
