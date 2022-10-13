@@ -12,6 +12,7 @@
     "refreshSite": "Refresh site",
     "throwError": "ERROR",
     "login": "Login",
+    "logout": "Logout",
     "loginUserName": "Input username",
     "loginPassword": "Input password",
     "modalText": "Text modal window",
