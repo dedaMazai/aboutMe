@@ -12,6 +12,8 @@
     "refreshSite": "Обновить страницу",
     "throwError": "ОШИБКА",
     "login": "Войти",
+    "loginUserName": "Введите username",
+    "loginPassword": "Введите пароль",
     "modalText": "Текст модального окна",
     "increment": "Добавить",
     "decrement": "Уменьшить"
