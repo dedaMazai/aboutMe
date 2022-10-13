@@ -16,5 +16,7 @@
     "loginPassword": "Input password",
     "modalText": "Text modal window",
     "increment": "Increment",
+    "formAuthorization": "Form authorization",
+    "userAuthorizationInvalid": "UUser authorization invalid",
     "decrement": "Decrement"
 }

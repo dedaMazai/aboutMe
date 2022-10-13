@@ -16,5 +16,7 @@
     "loginPassword": "Введите пароль",
     "modalText": "Текст модального окна",
     "increment": "Добавить",
+    "formAuthorization": "Форма авторизации",
+    "userAuthorizationInvalid": "Вы ввели неверный логин или пароль",
     "decrement": "Уменьшить"
 }

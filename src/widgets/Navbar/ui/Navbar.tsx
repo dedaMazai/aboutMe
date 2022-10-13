@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useCallback, useState } from 'react';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { LoginModal } from 'features/AuthByUserName/ui';
+import { LoginModal } from 'features/AuthByUserName';
 
 import cls from './Navbar.module.scss';
 
