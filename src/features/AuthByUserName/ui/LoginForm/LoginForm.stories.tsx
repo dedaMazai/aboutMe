@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ReduxDecorator } from 'shared/config/storybook/ReduxDecorator/ReduxDecorator';
-import { LoginForm } from './LoginForm';
+import LoginForm from './LoginForm';
 
 import 'app/styles/index.scss';
 

@@ -19,5 +19,6 @@
     "increment": "Increment",
     "formAuthorization": "Form authorization",
     "userAuthorizationInvalid": "UUser authorization invalid",
-    "decrement": "Decrement"
+    "decrement": "Decrement",
+    "aboutPage": "About Page"
 }

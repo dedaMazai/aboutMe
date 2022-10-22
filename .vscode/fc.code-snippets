@@ -24,8 +24,8 @@
 					"\t\t<div className={classNames(cls.${1:${TM_FILENAME_BASE}}, {}, [className])}>",
 						"\t\t\t",
 					"\t\t</div>",
-				"\t)",
-			"}"
+				"\t);",
+			"};"
 		],
 		"description": "Create function component"
 	}

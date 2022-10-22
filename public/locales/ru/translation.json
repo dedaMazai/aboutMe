@@ -19,5 +19,6 @@
     "increment": "Добавить",
     "formAuthorization": "Форма авторизации",
     "userAuthorizationInvalid": "Вы ввели неверный логин или пароль",
-    "decrement": "Уменьшить"
+    "decrement": "Уменьшить",
+    "aboutPage": "О странице"
 }
