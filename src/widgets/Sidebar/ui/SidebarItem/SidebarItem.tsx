@@ -5,7 +5,7 @@ import { SidebarItemType } from '../../modal/items';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
-    item?: SidebarItemType;
+    item: SidebarItemType;
     collapsed: boolean;
 }
 
@@ -13,7 +13,7 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
     const { t } = useTranslation();
     return (
         <AppLink
-            to={item.path}
+            to={item?.path}
             className={classNames(cls.item, { [cls.collapsed]: collapsed })}
             theme={AppLinkTheme.SECONDARY}
         >

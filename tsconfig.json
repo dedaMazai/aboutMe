@@ -11,7 +11,7 @@
         "paths": {
             "*": ["./src/*"]
         },
-        // "strict": true,
+        "strict": true,
         "esModuleInterop": true,
         //позволяет работать с пакетами, которые используют
         //common js как с обычными пакетами с помощью import, тк (require() module.export) это common js
