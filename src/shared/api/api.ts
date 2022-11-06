@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
+import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorages';
 
 // const baseUrl = __IS_DEV__ ? 'http://localhost:8000' : 'https://production:8000'; как альтернатива __API__
 
