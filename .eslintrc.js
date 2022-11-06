@@ -26,6 +26,7 @@ module.exports = {
     ],
     rules: {
         'react/jsx-indent': [2, 4],
+        'react/no-array-index-key': 'off',
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
         'react/jsx-filename-extension': [2, {
@@ -63,6 +64,7 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
         __API__: true,
+        __PROJECT__: true,
     },
     overrides: [// позволяет для определного типа файла переопределить правила
         {

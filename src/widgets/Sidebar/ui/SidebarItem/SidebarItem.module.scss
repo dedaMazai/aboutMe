@@ -11,6 +11,7 @@
 
 .icon {
     fill: var(--inverted-secondary-color);
+    flex-shrink: 0;
 }
 
 .collapsed {

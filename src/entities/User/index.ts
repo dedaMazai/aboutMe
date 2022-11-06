@@ -11,3 +11,7 @@ export {
 export {
     getUserAuthData,
 } from './modal/selectors/getUserAuthData/getUserAuthData';
+
+export {
+    getUserInited,
+} from './modal/selectors/getUserInited/getUserInited';

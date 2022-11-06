@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 import 'app/styles/index.scss';
 
@@ -56,3 +56,10 @@ PrimaryNoTitleDark.args = {
     text: 'Text weffew wegweggew 213',
 };
 PrimaryNoTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SizeL = Template.bind({});
+PrimaryNoTitleDark.args = {
+    title: 'Заголовок',
+    text: 'Text main',
+    size: TextSize.L,
+};

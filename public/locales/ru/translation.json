@@ -7,6 +7,8 @@
     "toggle": "Сайдбор",
     "main": "Главная",
     "aboutSite": "О сайте",
+    "profile": "Профиль",
+    "article": "Статьи",
     "notFound": "Не найдена страница",
     "setTheUnknownProblem": "Произошла непредвиденная ошибка",
     "refreshSite": "Обновить страницу",
@@ -20,5 +22,6 @@
     "formAuthorization": "Форма авторизации",
     "userAuthorizationInvalid": "Вы ввели неверный логин или пароль",
     "decrement": "Уменьшить",
+    "esc": "Отменить",
     "aboutPage": "О странице"
 }

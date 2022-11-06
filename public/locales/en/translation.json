@@ -7,6 +7,8 @@
     "toggle": "Sidebar",
     "main": "Main",
     "aboutSite": "About Site",
+    "profile": "Profile",
+    "article": "Articles",
     "notFound": "Not found",
     "setTheUnknownProblem": "Set the unknown problem",
     "refreshSite": "Refresh site",
@@ -20,5 +22,6 @@
     "formAuthorization": "Form authorization",
     "userAuthorizationInvalid": "UUser authorization invalid",
     "decrement": "Decrement",
+    "esc": "Сancel",
     "aboutPage": "About Page"
 }

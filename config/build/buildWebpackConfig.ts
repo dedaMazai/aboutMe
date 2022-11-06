@@ -20,6 +20,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             filename: '[name].[contenthash].js', // название бандла
             path: paths.build, // папка куда складывать бандл
             clean: true,
+            publicPath: '/',
         },
         plugins: buildPlugins(options),
         devServer: isDev ? buildDevServer(options) : undefined,
