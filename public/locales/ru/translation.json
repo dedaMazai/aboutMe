@@ -23,5 +23,7 @@
     "userAuthorizationInvalid": "Вы ввели неверный логин или пароль",
     "decrement": "Уменьшить",
     "esc": "Отменить",
+    "Write text your comment": "Введите текст коментрания",
+    "Send": "Отправить",
     "aboutPage": "О странице"
 }

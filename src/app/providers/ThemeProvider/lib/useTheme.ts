@@ -18,14 +18,14 @@ export function useTheme(): UseThemeResult {
             break;
         case Theme.BLACK: newTheme = Theme.DARK;
             break;
-        default: newTheme = Theme.LIGHT;
+        default: newTheme = Theme.BLACK;
         }
         setTheme?.(newTheme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
 
     return {
-        theme: theme || Theme.LIGHT,
+        theme: theme || Theme.BLACK,
         toggleTheme,
     };
 }
