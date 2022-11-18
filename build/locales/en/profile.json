@@ -1,0 +1,18 @@
+{
+    "profilePage": "Page profile",
+    "profile": "Profile",
+    "Your name": "Your name",
+    "Your surname": "Your surname",
+    "edit": "Edit",
+    "save": "Save",
+    "Your age": "Your age",
+    "City": "City",
+    "esc": "Cancel",
+    "Yor username": "Yor username",
+    "Input url avatar": "Input url avatar",
+    "Choose a currency": "Choose a currency",
+    "Choose a country": "Choose a country",
+
+    "error.loadProfile": "An error occurred while loading the profile",
+    "error.refreshPage": "Try refreshing the page"
+}
