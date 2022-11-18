@@ -6,8 +6,6 @@ import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
 import {
-    ArticleDetailsCommentSchema,
-    ArticleDetailsRecommendationSchema,
     ArticleDetailsPageSchema,
 } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentForm';
