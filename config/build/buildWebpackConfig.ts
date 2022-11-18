@@ -23,12 +23,12 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             publicPath: '/',
         },
         plugins: buildPlugins(options),
-        devServer: isDev ? buildDevServer(options) : undefined,
         module: {
             rules: buildLoaders(options), // здесь конфигурируем лоудеры
         },
         resolve: buildResolvers(options), // необходимо чтобы при
         // импорте не прописывать расширения файлов
         devtool: isDev ? 'inline-source-map' : undefined,
+        devServer: isDev ? buildDevServer(options) : undefined,
     };
 }
