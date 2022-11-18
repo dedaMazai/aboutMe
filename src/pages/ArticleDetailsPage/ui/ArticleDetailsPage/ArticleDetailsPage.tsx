@@ -1,5 +1,5 @@
-import { ArticleDetails } from 'entities/Article';
-import { Page } from 'shared/ui/Page/Page';
+import { ArticleDetails, ArticleList } from 'entities/Article';
+import { Page } from 'widgets/Page/Page';
 import { CommentList } from 'entities/Comment';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -8,23 +8,32 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/addCommentForm';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { articleDetailsPageReducer } from '../../model/slices';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
-import { ArticleDetailsCommentsReducer, getArticleComments } from '../../model/slices/ArticleDetailsCommentSlice';
+import { getArticleComments } from '../../model/slices/ArticleDetailsCommentSlice';
+import {
+    getArticleRecommendations,
+} from '../../model/slices/ArticleDetailsRecommendationsSlice';
+import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
+import {
+    fetchArticleRecommendations,
+} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import cls from './ArticleDetailsPage.module.scss';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 interface ArticleDetailsPageProps {
     className?: string
 }
 
 const reducers: ReducersList = {
-    articleDetailsComments: ArticleDetailsCommentsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
@@ -33,12 +42,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     let { id } = useParams<{id: string}>();
     const comments = useSelector(getArticleComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
+    const recommendations = useSelector(getArticleRecommendations.selectAll);
+    const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
     const dispatch = useAppDispatch();
-    const navigate = useNavigate();
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
 
     if (__PROJECT__ === 'storybook') {
         id = '1';
@@ -50,6 +56,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
+        dispatch(fetchArticleRecommendations());
     });
 
     if (!id) {
@@ -63,11 +70,24 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button theme={ThemeButton.OUTLINE} onClick={onBackToList}>
-                    {t('Back to list')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
-                <Text className={cls.commentTitle} title={t('comments')} />
+                <Text
+                    size={TextSize.L}
+                    className={cls.commentTitle}
+                    title={t('Recommendation')}
+                />
+                <ArticleList
+                    articles={recommendations}
+                    isLoading={recommendationsIsLoading}
+                    className={cls.recommendations}
+                    target="_blank"
+                />
+                <Text
+                    size={TextSize.L}
+                    className={cls.commentTitle}
+                    title={t('comments')}
+                />
                 <AddCommentForm onSendComment={onSendComment} />
                 <CommentList
                     isLoading={commentsIsLoading}

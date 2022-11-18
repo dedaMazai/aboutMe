@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ReduxDecorator } from 'shared/config/storybook/ReduxDecorator/ReduxDecorator';
 import { CommentList } from './CommentList';
 
 import 'app/styles/index.scss';
