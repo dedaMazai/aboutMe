@@ -1,4 +1,4 @@
-import { LoginSchema } from '../types/LoginSchema';
+import { LoginSchema } from '../types/loginSchema';
 import { loginActions, loginReducer } from './loginSlice';
 
 describe('loginSlice.test', () => {
