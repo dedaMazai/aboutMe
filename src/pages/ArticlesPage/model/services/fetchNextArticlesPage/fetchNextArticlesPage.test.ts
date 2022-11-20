@@ -1,4 +1,4 @@
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from 'shared/lib/tests/testAsyncThunk/testAsyncThunk';
 import { ArticlePageActions } from '../../slices/ArticlePageSlice';
 import { fetchArticleList } from '../fetchArticleList/fetchArticleList';
 import { fetchNextArticlesPage } from './fetchNextArticlesPage';
