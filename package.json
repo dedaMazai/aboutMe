@@ -59,6 +59,7 @@
     "css-loader": "^6.7.1",
     "eslint": "^8.24.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-andreibread-plugin": "^0.0.9",
     "eslint-plugin-i18next": "^6.0.0-2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -91,6 +92,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.4",
     "@reduxjs/toolkit": "^1.8.6",
     "@types/react-redux": "^7.1.24",
     "axios": "^1.1.2",

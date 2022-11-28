@@ -23,6 +23,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'andreibread-plugin',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -46,7 +47,16 @@ module.exports = {
         'no-return-await': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'target'],
+            ignoreAttribute: [
+                'as',
+                'role',
+                'data-testid',
+                'to', 'target',
+                'justify',
+                'align',
+                'direction',
+                'gap',
+            ],
         }],
         'max-len': [
             'error', {
@@ -60,6 +70,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'andreibread-plugin/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,

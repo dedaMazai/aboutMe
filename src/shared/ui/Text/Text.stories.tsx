@@ -58,8 +58,22 @@ PrimaryNoTitleDark.args = {
 PrimaryNoTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const SizeL = Template.bind({});
-PrimaryNoTitleDark.args = {
+SizeL.args = {
     title: 'Заголовок',
     text: 'Text main',
     size: TextSize.L,
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    title: 'Заголовок',
+    text: 'Text main',
+    size: TextSize.M,
+};
+
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Заголовок',
+    text: 'Text main',
+    size: TextSize.S,
 };
