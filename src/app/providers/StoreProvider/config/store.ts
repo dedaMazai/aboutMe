@@ -4,6 +4,7 @@ import { userReducer } from 'entities/User';
 import { $api } from 'shared/api/api';
 import { CombinedState, Reducer } from 'redux';
 import { scrollUiReducer } from 'features/ScrollUi';
+import { rtqApi } from 'shared/api/rtqApi';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
@@ -16,6 +17,7 @@ export function createReduxStore(
         counter: counterReducer,
         user: userReducer,
         scrollUi: scrollUiReducer,
+        [rtqApi.reducerPath]: rtqApi.reducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);
@@ -32,7 +34,7 @@ export function createReduxStore(
             thunk: {
                 extraArgument: extraArg,
             },
-        }),
+        }).concat(rtqApi.middleware),
     });
 
     // @ts-ignore

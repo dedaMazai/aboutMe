@@ -4,3 +4,4 @@ node_modules
 /storybook-statik
 .loki/report.html
 .loki/report.json
+/reports

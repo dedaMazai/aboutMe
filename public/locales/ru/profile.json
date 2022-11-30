@@ -15,6 +15,7 @@
     "Server error": "Серверная ошибка при сохранении",
     "Incorrect age": "Не коректный возраст",
     "Incorrect country": "Не коректный регион",
+    "Profile not found": "Профиль не найден",
     "Incorrect data": "Имя и фамилия обязательны",
     "No data": "Данные не указаны",
 

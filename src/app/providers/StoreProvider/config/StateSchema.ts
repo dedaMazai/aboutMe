@@ -2,7 +2,6 @@ import { UserSchema } from 'entities/User';
 import { CounterSchema } from 'entities/Counter';
 import { LoginSchema } from 'features/AuthByUserName';
 import { EnhancedStore } from '@reduxjs/toolkit';
-import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
 import {
@@ -11,12 +10,15 @@ import {
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
 import { ScrollUiSchema } from 'features/ScrollUi/modal/types/ScrollUiSchema';
+import { rtqApi } from 'shared/api/rtqApi';
+import { ProfileSchema } from 'features/editableProfileCard';
 import { ReducerManager } from './reducerManager';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     scrollUi: ScrollUiSchema;
+    [rtqApi.reducerPath]: ReturnType<typeof rtqApi.reducer>,
 
     // Асинхронные редьюсеры
     loginForm?: LoginSchema;
