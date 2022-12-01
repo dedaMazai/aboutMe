@@ -13,5 +13,11 @@ export {
 } from './modal/selectors/getUserAuthData/getUserAuthData';
 
 export {
+    isUserAdmin,
+    isUserManager,
+    getUserRoles,
+} from './modal/selectors/roleSelectors';
+
+export {
     getUserInited,
 } from './modal/selectors/getUserInited/getUserInited';

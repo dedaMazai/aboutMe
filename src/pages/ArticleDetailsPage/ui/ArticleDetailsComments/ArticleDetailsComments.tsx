@@ -1,6 +1,6 @@
 import { CommentList } from 'entities/Comment';
 import { AddCommentForm } from 'features/addCommentForm';
-import { useCallback } from 'react';
+import { Suspense, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -34,12 +34,14 @@ export const ArticleDetailsComments = (props: ArticleDetailsCommentsProps) => {
     }, [dispatch]);
 
     return (
-        <VStack gap="16" className={classNames('', {}, [className])}>
+        <VStack gap="16" max className={classNames('', {}, [className])}>
             <Text
                 size={TextSize.L}
                 title={t('comments')}
             />
-            <AddCommentForm onSendComment={onSendComment} />
+            <Suspense fallback="...">
+                <AddCommentForm onSendComment={onSendComment} />
+            </Suspense>
             <CommentList
                 isLoading={commentsIsLoading}
                 comments={comments}

@@ -15,7 +15,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
     const { t } = useTranslation('article');
     const { isLoading, data: articles, error } = useArticleRecommendations(3); // 3 это аргумент limit в query
 
-    if (isLoading || error) {
+    if (isLoading || error || !articles) {
         return null;
     }
 

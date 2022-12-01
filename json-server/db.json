@@ -626,23 +626,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "role": [
+        "ADMIN"
+      ],
       "avatar": "https://cdnstatic.rg.ru/uploads/images/145/57/97/68.jpg"
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "manager",
       "password": "123",
-      "role": "USER",
+      "role": [
+        "MANAGER"
+      ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
   "profile": [
     {
       "id": "1",
-      "first": "jghwhhher",
-      "lastname": "asfewr",
-      "age": 465,
+      "first": "Andrey",
+      "lastname": "Chipizybov",
+      "age": 23,
       "currency": "EUR",
       "country": "Armenia",
       "city": "Moscow",
