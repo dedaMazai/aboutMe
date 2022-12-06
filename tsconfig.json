@@ -15,9 +15,12 @@
         "esModuleInterop": true,
         //позволяет работать с пакетами, которые используют
         //common js как с обычными пакетами с помощью import, тк (require() module.export) это common js
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
         //многие библиотеки не поддерживают дефолтный импорт, и нам приходится писать * as Library
         //с этим флагом можно не использовать * as
+        "isolatedModules": true
+        // для упрощения сборки типы и интерфейсы нужно выносить в отдельные изолированные модули
+        // (файлы только с типами и интерфейсами) при их экпорте из public api добавляем к ним type
     },
     "ts-node": {
         "compilerOptions": {

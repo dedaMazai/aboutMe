@@ -15,9 +15,9 @@ import { getProfileLoading } from '../../model/selectors/getProfileIsLoading/get
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
-import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
+import { ValidateProfileError } from '../../model/const/profileConst';
 
 interface EditableProfileCardProps {
     className?: string;
