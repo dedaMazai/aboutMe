@@ -9,7 +9,7 @@
         "moduleResolution": "node",//определяется какие импорты будут (node(99% случаев) и classic)
         "baseUrl": ".",//Для абсолютных путей
         "paths": {
-            "*": ["./src/*"]
+            "@/*": ["./src/*"]
         },
         "strict": true,
         "esModuleInterop": true,

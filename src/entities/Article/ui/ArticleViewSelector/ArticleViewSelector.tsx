@@ -1,9 +1,9 @@
-import SmallList from 'shared/assets/icons/smallList.svg';
-import BigList from 'shared/assets/icons/bigList.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { Icon } from 'shared/ui/Icon/Icon';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import SmallList from '@/shared/assets/icons/smallList.svg';
+import BigList from '@/shared/assets/icons/bigList.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { ArticleView } from '../../model/types/article';
 import cls from './ArticleViewSelector.module.scss';
 

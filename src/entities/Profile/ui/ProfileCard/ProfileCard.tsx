@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { Currency } from 'entities/Currency/modal/types/currency';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Input } from 'shared/ui/input/Input';
-import { Loader } from 'shared/ui/Loader';
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { Country } from 'entities/Country/modal/types/country';
-import { CurrencySelect } from 'entities/Currency';
-import { CountrySelect } from 'entities/Country';
-import { HStack, VStack } from 'shared/ui/Stack';
+import { Currency } from '@/entities/Currency/modal/types/currency';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Input } from '@/shared/ui/input/Input';
+import { Loader } from '@/shared/ui/Loader';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text';
+import { Country } from '@/entities/Country/modal/types/country';
+import { CurrencySelect } from '@/entities/Currency';
+import { CountrySelect } from '@/entities/Country';
+import { HStack, VStack } from '@/shared/ui/Stack';
 import { Profile } from '../../modal/types/profile';
 import cls from './ProfileCard.module.scss';
 

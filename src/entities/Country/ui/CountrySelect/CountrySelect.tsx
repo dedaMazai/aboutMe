@@ -1,8 +1,8 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Listbox } from 'shared/ui/Popups';
-import { Select } from 'shared/ui/Select/Select';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { ListBox } from '@/shared/ui/Popups';
+import { Select } from '@/shared/ui/Select/Select';
 import { Country } from '../../modal/types/country';
 
 interface CountrySelectProps {
@@ -30,7 +30,7 @@ export const CountrySelect = memo(({
     }, [onChange]);
 
     return (
-        <Listbox
+        <ListBox
             className={className}
             value={value}
             defaultValue={t('Choose a country')}

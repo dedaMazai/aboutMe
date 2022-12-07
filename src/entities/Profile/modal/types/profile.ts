@@ -1,5 +1,5 @@
-import { Country } from 'entities/Country/modal/types/country';
-import { Currency } from 'entities/Currency/modal/types/currency';
+import { Country } from '@/entities/Country/modal/types/country';
+import { Currency } from '@/entities/Currency/modal/types/currency';
 
 export interface Profile {
     id?: string;

@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ReduxDecorator } from 'shared/config/storybook/ReduxDecorator/ReduxDecorator';
+import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
 import LoginForm from './LoginForm';
 
-import 'app/styles/index.scss';
+import '@/app/styles/index.scss';
 
 export default {
     title: 'features/LoginForm',

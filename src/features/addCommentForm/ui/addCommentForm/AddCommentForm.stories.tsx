@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ReduxDecorator } from 'shared/config/storybook/ReduxDecorator/ReduxDecorator';
 import { action } from '@storybook/addon-actions';
+import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
 import AddCommentForm from './AddCommentForm';
 
-import 'app/styles/index.scss';
+import '@/app/styles/index.scss';
 
 export default {
     title: 'features/AddCommentForm',

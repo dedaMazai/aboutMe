@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import avatarImg from './avatar.jpg';
 
 import { Avatar } from './Avatar';
-import 'app/styles/index.scss';
+import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/Avatar',
