@@ -16,8 +16,8 @@ describe('addQueryParams.test', () => {
     });
     test('test with undefined', () => {
         const params = getQueryParams({
-            test: 'value',
+            test: undefined,
         });
-        expect(params).toEqual('?test=value');
+        expect(params).toEqual('?');
     });
 });
