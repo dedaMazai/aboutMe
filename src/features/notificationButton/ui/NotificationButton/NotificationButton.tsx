@@ -29,13 +29,13 @@ export const NotificationButton = (props: NotificationButtonProps) => {
     }, []);
 
     const trigger = (
-        <Button onClick={onShowDrawer} theme={ThemeButton.CLEAR}>
+        <Button className={cls.center} onClick={onShowDrawer} theme={ThemeButton.CLEAR}>
             <Icon Svg={Notification} inverted />
         </Button>
     );
 
     return (
-        <div>
+        <>
             <BrowserView>
                 <Popover
                     className={classNames(cls.NotificationButton, {}, [className])}
@@ -51,6 +51,6 @@ export const NotificationButton = (props: NotificationButtonProps) => {
                     <NotificationList className={cls.notification} />
                 </Drawer>
             </MobileView>
-        </div>
+        </>
     );
 };
