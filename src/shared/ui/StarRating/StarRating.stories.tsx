@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { StarRating } from './StarRating';
-import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/StarRating',

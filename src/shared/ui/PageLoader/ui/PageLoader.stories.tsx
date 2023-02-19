@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { PageLoader } from './PageLoader';
-import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/PageLoader',

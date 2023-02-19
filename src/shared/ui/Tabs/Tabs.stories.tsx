@@ -1,8 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-
 import { Tabs } from './Tabs';
-import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/Tabs',

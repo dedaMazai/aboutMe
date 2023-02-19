@@ -26,7 +26,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const cssLoaders = buildCssLoader(isDev);
 
     // так как мы используем TS то дополнительные лоудеры не нужны для JSX
-    // но если бы писали на простом js то надо было бы добавить babel-louder, он же работает с JSX
+    // но если бы писали на простом js то надо было бы добавить babel-louder, он же работает с JSX (это все если используем TS Loader)
     // const typescriptLoader = {
     //     test: /\.tsx?$/, // здесь указываем расширение файлов которые необходимо пропустить через лоудер, ловит ts и tsx
     //     use: 'ts-loader', // указывем лоудер для тайпскрипта

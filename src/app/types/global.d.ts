@@ -28,3 +28,8 @@ type DeepPartial<T> = T extends object ? {
 type OptionalRecord<K extends keyof any, T> = {
   [P in K]?: T;
 };
+
+type SomePropertyFrom<T> = {
+  [K in keyof T]: Pick<Required<T>, K>
+}[keyof T]
+// {name: string} | {age: number} | ...x

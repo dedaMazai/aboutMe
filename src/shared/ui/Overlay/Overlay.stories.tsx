@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { Overlay } from './Overlay';
-import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/Overlay',

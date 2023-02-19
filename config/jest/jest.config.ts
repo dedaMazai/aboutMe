@@ -14,8 +14,6 @@ module.exports = {
     ],
     moduleFileExtensions: [
         'js',
-        'mjs',
-        'cjs',
         'jsx',
         'ts',
         'tsx',
@@ -37,12 +35,7 @@ module.exports = {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-        '^@/shared(.*)$': '<rootDir>/src/shared$1',
-        '^@/entities(.*)$': '<rootDir>/src/entities$1',
-        '^@/features(.*)$': '<rootDir>/src/features$1',
-        '^@/widgets(.*)$': '<rootDir>/src/widgets$1',
-        '^@/pages(.*)$': '<rootDir>/src/pages$1',
-        '^@/app(.*)$': '<rootDir>/src/app$1',
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
     globals: {
         __IS_DEV__: true,
@@ -59,7 +52,7 @@ module.exports = {
         ['jest-html-reporters', {
             publicPath: '<rootDir>/reports/unit',
             filename: 'report.html',
-            openReport: true,
+            // openReport: true,
             inlineSource: true,
         }],
     ],

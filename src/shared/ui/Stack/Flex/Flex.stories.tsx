@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { Flex } from './Flex';
-import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/Flex',

@@ -16,13 +16,17 @@ export default ({ config }: {config: webpack.Configuration}) => {
     config!.resolve!.extensions!.push('.ts', '.tsx');
     config!.resolve!.alias = {
         ...config!.resolve!.alias,
-        '@/shared': path.resolve(__dirname, '..', '..', 'src', 'shared'),
-        '@/entities': path.resolve(__dirname, '..', '..', 'src', 'entities'),
-        '@/features': path.resolve(__dirname, '..', '..', 'src', 'features'),
-        '@/widgets': path.resolve(__dirname, '..', '..', 'src', 'widgets'),
-        '@/pages': path.resolve(__dirname, '..', '..', 'src', 'pages'),
-        '@/app': path.resolve(__dirname, '..', '..', 'src', 'app'),
+        '@': paths.src,
     };
+    // eslint-disable-next-line no-param-reassign
+    // @ts-ignore
+    // config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
+    //     if (/svg/.test(rule.test as string)) {
+    //         return { ...rule, exclude: /\.svg$/i };
+    //     }
+
+    //     return rule;
+    // });
 
     config!.module!.rules!.push({
         test: /\.svg$/,

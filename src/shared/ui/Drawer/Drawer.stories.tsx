@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { Drawer } from './Drawer';
-import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/Drawer',

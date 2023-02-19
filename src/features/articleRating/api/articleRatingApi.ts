@@ -1,4 +1,4 @@
-import { Rating } from '@/entities/Rating/modal/types/types';
+import { Rating } from '@/entities/Rating';
 import { rtqApi } from '@/shared/api/rtqApi';
 
 interface GetArticleRatingArg {

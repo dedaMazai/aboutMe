@@ -3,7 +3,6 @@ import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDe
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import avatar from '@/shared/assets/tests/avatar.jpg';
-import '@/app/styles/index.scss';
 import { ProfileCard } from './ProfileCard';
 
 export default {

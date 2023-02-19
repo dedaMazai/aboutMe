@@ -24,6 +24,7 @@ module.exports = {
         'i18next',
         'react-hooks',
         'andreibread-plugin',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -70,7 +71,27 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'andreibread-plugin/path-checker': 'error',
+        'unused-imports/no-unused-imports': 'error',
+        'andreibread-plugin/path-checker': [
+            'error',
+            {
+                alias: '@',
+            },
+        ],
+        'andreibread-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/ReduxDecorator.tsx'],
+            },
+        ],
+        'andreibread-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/testing', '**/StoreProvider'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

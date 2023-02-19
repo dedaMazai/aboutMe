@@ -1,3 +1,4 @@
+/* eslint-disable andreibread-plugin/layer-imports */
 import { Story } from '@storybook/react';
 import '@/app/styles/index.scss';
 

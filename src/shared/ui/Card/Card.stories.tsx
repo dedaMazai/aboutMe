@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Text } from '../Text/Text';
-
-import '@/app/styles/index.scss';
 import { Card } from './Card';
 
 export default {

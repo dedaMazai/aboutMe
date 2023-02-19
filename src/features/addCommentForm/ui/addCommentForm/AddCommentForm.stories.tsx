@@ -3,8 +3,6 @@ import { action } from '@storybook/addon-actions';
 import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
 import AddCommentForm from './AddCommentForm';
 
-import '@/app/styles/index.scss';
-
 export default {
     title: 'features/AddCommentForm',
     component: AddCommentForm,

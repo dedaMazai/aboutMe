@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { Input } from './Input';
-import '@/app/styles/index.scss';
 
 export default {
     title: 'shared/Input',

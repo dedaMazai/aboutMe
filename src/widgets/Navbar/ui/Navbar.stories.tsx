@@ -1,10 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
 import { Navbar } from './Navbar';
-
-import '@/app/styles/index.scss';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'widgets/Navbar',

@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Dropdown } from '@/shared/ui/Popups';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Avatar } from '@/shared/ui/Avatar';
 import {
     getUserAuthData,
     isUserAdmin,
     isUserManager,
     userActions,
 } from '@/entities/User';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
 
 import cls from './AvatarDropdown.module.scss';
 
@@ -44,12 +44,12 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
                 ...(
                     isAdminPanelAvailable ? [{
                         content: t('admin'),
-                        href: RoutePath.admin_panel,
+                        href: getRouteAdmin(),
                     }] : []
                 ),
                 {
                     content: t('profile'),
-                    href: RoutePath.profile + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     content: t('logout'),

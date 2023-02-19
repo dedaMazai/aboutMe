@@ -1,13 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
 
 // eslint-disable-next-line import/order
 import ProfilePage from './ProfilePage';
-import '@/app/styles/index.scss';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'pages/ProfilePage',

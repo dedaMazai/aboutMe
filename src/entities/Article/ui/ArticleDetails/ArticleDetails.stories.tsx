@@ -3,8 +3,6 @@ import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDe
 import { Article, ArticleBlockType, ArticleType } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
-import '@/app/styles/index.scss';
-
 export default {
     title: 'entities/ArticleDetails',
     component: ArticleDetails,
