@@ -11,7 +11,7 @@ import {
 } from '@/entities/Article';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorages';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 import { ArticlePageSchema } from '../types/articlePageShema';
 import { fetchArticleList } from '../services/fetchArticleList/fetchArticleList';
 
