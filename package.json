@@ -28,6 +28,9 @@
     "postinstall": "node ./scripts/clear-cache.js",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -120,6 +123,7 @@
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^6.1.5",
     "i18next-http-backend": "^1.4.4",
+    "lint-staged": "^13.1.2",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
