@@ -7065,10 +7065,10 @@
   dependencies:
     "debug" "^3.2.7"
 
-"eslint-plugin-andreibread-plugin@^0.1.2":
-  "integrity" "sha512-VF5hXdSLZwv057PJcQimykJahRfx3Yxca2feglDHtOgTw7ugp/PiijWzew7KqaKT1N5jaLjMB3osUfmqkSFGTg=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-andreibread-plugin/-/eslint-plugin-andreibread-plugin-0.1.2.tgz"
-  "version" "0.1.2"
+"eslint-plugin-andreibread-plugin@^0.1.3":
+  "integrity" "sha512-vC+yY2IPCT5VmcByZ4TAkOYMeYv+mQXh1CwSJ3nBt8shKZ/NCxdk3dleJgf0wbL00UUj1l+xlWghcQPKqSPJpA=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-andreibread-plugin/-/eslint-plugin-andreibread-plugin-0.1.3.tgz"
+  "version" "0.1.3"
   dependencies:
     "micromatch" "^4.0.5"
     "requireindex" "^1.2.0"
