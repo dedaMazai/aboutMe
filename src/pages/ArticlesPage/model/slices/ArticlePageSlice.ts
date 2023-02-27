@@ -10,7 +10,7 @@ import {
     ArticleType,
 } from '@/entities/Article';
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorages';
+import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types/sort';
 import { ArticlePageSchema } from '../types/articlePageShema';
 import { fetchArticleList } from '../services/fetchArticleList/fetchArticleList';
