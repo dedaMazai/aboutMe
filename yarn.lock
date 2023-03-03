@@ -7281,10 +7281,10 @@
   dependencies:
     "debug" "^3.2.7"
 
-"eslint-plugin-andreibread-plugin@^0.1.31":
-  "integrity" "sha512-Q4tN5q0dl8KlyD6tI0huQqvdVrM7RjQ5/wSk2yrN3exUP98hNN4bt3xIAky6y7YAfXQRRkrZdmvutb31893G9A=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-andreibread-plugin/-/eslint-plugin-andreibread-plugin-0.1.31.tgz"
-  "version" "0.1.31"
+"eslint-plugin-andreibread-plugin@^0.1.32":
+  "integrity" "sha512-UpjNbpqaEXK9g1szV1BGsXtH7zEZVEXxJ98JDJdxeKiHbcraznEbmQndXhKQS0H1L4Q6TvvaHRx9F9t2en7Rjw=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-andreibread-plugin/-/eslint-plugin-andreibread-plugin-0.1.32.tgz"
+  "version" "0.1.32"
   dependencies:
     "micromatch" "^4.0.5"
     "requireindex" "^1.2.0"
