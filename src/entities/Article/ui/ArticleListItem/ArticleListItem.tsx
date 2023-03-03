@@ -15,10 +15,11 @@ import {
     ArticleTextBlock,
     ArticleView,
 } from '../../model/types/article';
-import cls from './ArticleListItem.module.scss';
 import ArticleTextBlockComponent from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { AppImage } from '@/shared/ui/AppImage';
+
+import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemProps {
     className?: string;
