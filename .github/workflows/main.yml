@@ -119,3 +119,55 @@ jobs:
       - name: linting css
         run: npm run lint:scss
 
+# stages:
+#   - test
+#   - build
+#   - deploy
+
+# code_quality:
+#   image: node:14.17.4
+#   stage: test
+#   before_script:
+#     - npm ci
+#   script:
+#     - npm run eslint
+#     - npm run stylelint
+#     - npm run prettier-check
+#   only:
+#     - merge_requests
+
+# build:
+#   image: node:14.17.4
+#   stage: build
+#   before_script:
+#     - npm ci
+#   script:
+#     - npm run build
+#   artifacts:
+#     paths:
+#       - dist
+#   only:
+#     - merge_requests
+#     - master
+
+# deploy:
+#   image: alpine:latest
+#   stage: deploy
+#   before_script:
+#     # устанавливаем команду rsync
+#     - apk update && apk add rsync openssh
+#     - mkdir ~/.ssh
+#     - chmod 600 ~/.ssh
+#     - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_rsa
+#     - chmod 600 ~/.ssh/id_rsa
+#     - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+#     - chmod 600 ~/.ssh/known_hosts
+#   environment:
+#     name: production
+#   resource_group: production
+#   script:
+#     # синхронизируем папку dist с удаленной папкой
+#     # флаг delete нужен для того, чтобы у нас в удаленной папке всегда находилось то, что лежит в папке dist конкретного деплоя
+#     - rsync -a --delete dist/ ваш_сервер:/home/пользователь/проект
+#   only:
+#     - master
