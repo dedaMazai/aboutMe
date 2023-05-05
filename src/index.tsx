@@ -11,7 +11,9 @@ import '@/shared/config/i18/i18n';
 const container = document.getElementById('root');
 
 if (!container) {
-    throw new Error('Контейнер root не найден, НЕ удалось вмонтировать React app');
+    throw new Error(
+        'Контейнер root не найден, НЕ удалось вмонтировать React app',
+    );
 }
 
 const root = createRoot(container);
