@@ -60,7 +60,7 @@ export const Flex = (props: FlexProps) => {
         justifyClasses[justify],
         alignClasses[align],
         directionClasses[direction],
-        gap && gapClasses[gap],
+        ...(gap ? [gapClasses[gap]] : []),
     ];
 
     const mods: Mods = {

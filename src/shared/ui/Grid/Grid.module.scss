@@ -1,0 +1,311 @@
+.Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.container {
+    .alignSelfStart {
+        align-self: start;
+    }
+
+    .alignSelfCenter {
+        align-self: center;
+    }
+
+    .alignSelfEnd {
+        align-self: end;
+    }
+
+    .justifySelfStart {
+        justify-self: start;
+    }
+
+    .justifySelfCenter {
+        justify-self: center;
+    }
+
+    .justifySelfEnd {
+        justify-self: end;
+    }
+
+    .justifySelfStretch {
+        justify-self: stretch;
+    }
+
+    .displaySize-1XS {
+        grid-column-end: span 1;
+    }
+
+    .displaySize-2XS {
+        grid-column-end: span 2;
+    }
+
+    .displaySize-3XS {
+        grid-column-end: span 3;
+    }
+
+    .displaySize-4XS {
+        grid-column-end: span 4;
+    }
+
+    .displaySize-5XS {
+        grid-column-end: span 5;
+    }
+
+    .displaySize-6XS {
+        grid-column-end: span 6;
+    }
+
+    .displaySize-7XS {
+        grid-column-end: span 7;
+    }
+
+    .displaySize-8XS {
+        grid-column-end: span 8;
+    }
+
+    .displaySize-9XS {
+        grid-column-end: span 9;
+    }
+
+    .displaySize-10XS {
+        grid-column-end: span 10;
+    }
+
+    .displaySize-11XS {
+        grid-column-end: span 11;
+    }
+
+    .displaySize-12XS {
+        grid-column-end: span 12;
+    }
+
+    .displaySize-1XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 1;
+        }
+    }
+
+    .displaySize-2XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 2;
+        }
+    }
+
+    .displaySize-3XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 3;
+        }
+    }
+
+    .displaySize-4XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 4;
+        }
+    }
+
+    .displaySize-5XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 5;
+        }
+    }
+
+    .displaySize-6XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 6;
+        }
+    }
+
+    .displaySize-7XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 7;
+        }
+    }
+
+    .displaySize-8XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 8;
+        }
+    }
+
+    .displaySize-9XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 9;
+        }
+    }
+
+    .displaySize-10XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 10;
+        }
+    }
+
+    .displaySize-11XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 11;
+        }
+    }
+
+    .displaySize-12XM {
+        @media (min-width: 600px) and (max-width: 1200px) {
+            grid-column-end: span 12;
+        }
+    }
+
+    .displaySize-1XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 1;
+        }
+    }
+
+    .displaySize-2XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 2;
+        }
+    }
+
+    .displaySize-3XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 3;
+        }
+    }
+
+    .displaySize-4XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 4;
+        }
+    }
+
+    .displaySize-5XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 5;
+        }
+    }
+
+    .displaySize-6XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 6;
+        }
+    }
+
+    .displaySize-7XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 7;
+        }
+    }
+
+    .displaySize-8XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 8;
+        }
+    }
+
+    .displaySize-9XL {
+        @media screen and (min-width: 1200px) {
+            grid-column-end: span 9;
+        }
+    }
+
+    .displaySize-10XL {
+        @media screen and (min-width: 6120px) {
+            grid-column-end: span 10;
+        }
+    }
+
+    .displaySize-11XL {
+        @media screen and (min-width: 6120px) {
+            grid-column-end: span 11;
+        }
+    }
+
+    .displaySize-12XL {
+        @media screen and (min-width: 6120px) {
+            grid-column-end: span 12;
+        }
+    }
+}
+
+.flowRow {
+    grid-auto-flow: row;
+}
+
+.flowColumn {
+    grid-auto-flow: column;
+}
+
+.alignItemsStart {
+    align-items: start;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+.alignItemsEnd {
+    align-items: end;
+}
+
+.justifyItemsStart {
+    justify-items: start;
+}
+
+.justifyItemsCenter {
+    justify-items: center;
+}
+
+.justifyItemsEnd {
+    justify-items: end;
+}
+
+.justifyItemsStretch {
+    justify-items: stretch;
+}
+
+.alignContentStart {
+    align-content: start;
+}
+
+.alignContentCenter {
+    align-content: center;
+}
+
+.alignContentEnd {
+    align-content: end;
+}
+
+.justifyContentStart {
+    justify-content: start;
+}
+
+.justifyContentCenter {
+    justify-content: center;
+}
+
+.justifyContentEnd {
+    justify-content: end;
+}
+
+.justifyContentStretch {
+    justify-content: stretch;
+}
+
+.gap4 {
+    gap: 4px;
+}
+
+.gap8 {
+    gap: 8px;
+}
+
+.gap16 {
+    gap: 16px;
+}
+
+.gap32 {
+    gap: 32px;
+}
+
+.max {
+    width: 100%;
+}
