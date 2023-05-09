@@ -208,19 +208,19 @@
     }
 
     .displaySize-10XL {
-        @media screen and (min-width: 6120px) {
+        @media screen and (min-width: 1200px) {
             grid-column-end: span 10;
         }
     }
 
     .displaySize-11XL {
-        @media screen and (min-width: 6120px) {
+        @media screen and (min-width: 1200px) {
             grid-column-end: span 11;
         }
     }
 
     .displaySize-12XL {
-        @media screen and (min-width: 6120px) {
+        @media screen and (min-width: 1200px) {
             grid-column-end: span 12;
         }
     }

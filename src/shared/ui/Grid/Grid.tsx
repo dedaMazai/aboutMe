@@ -1,12 +1,12 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
-import cls from './Flex.module.scss';
+import cls from './Grid.module.scss';
 
 export type GridJustify = 'start' | 'center' | 'end' | 'stretch';
 export type GridAlign = 'start' | 'center' | 'end';
 export type GridFlow = 'row' | 'column';
-export type FlexGap = '4' | '8' | '16' | '32';
+export type GridGap = '4' | '8' | '16' | '32';
 export type SizesDisplay =
     | '1'
     | '2'
@@ -26,7 +26,7 @@ type DivProps = DetailedHTMLProps<
     HTMLDivElement
 >;
 
-export interface FlexProps extends DivProps {
+export interface GridProps extends DivProps {
     className?: string;
     children: ReactNode;
     alignItems?: GridAlign;
@@ -34,7 +34,7 @@ export interface FlexProps extends DivProps {
     alignContent?: GridAlign;
     justifyContent?: GridJustify;
     flow?: GridFlow;
-    gap?: FlexGap;
+    gap?: GridGap;
     max?: boolean;
     container?: boolean;
 
@@ -90,7 +90,7 @@ const flowClasses: Record<GridFlow, string> = {
     column: cls.flowColumn,
 };
 
-const gapClasses: Record<FlexGap, string> = {
+const gapClasses: Record<GridGap, string> = {
     4: cls.gap4,
     8: cls.gap8,
     16: cls.gap16,
@@ -114,7 +114,7 @@ const displaySizeClasses: (
     12: cls[`displaySize-12${size}`],
 });
 
-export const Flex = (props: FlexProps) => {
+export const Grid = (props: GridProps) => {
     const {
         className,
         children,
@@ -146,7 +146,7 @@ export const Flex = (props: FlexProps) => {
         ...(justifySelf ? [justifySelfClasses[justifySelf]] : []),
         displaySizeClasses('XS')[xs],
         ...(xm ? [displaySizeClasses('XM')[xm]] : [displaySizeClasses('XM')[xs]]),
-        ...(xl ? [displaySizeClasses('XL')[xl]] : [displaySizeClasses('XM')[xm || xs]]),
+        ...(xl ? [displaySizeClasses('XL')[xl]] : [displaySizeClasses('XL')[xm || xs]]),
     ];
 
     const mods: Mods = {
