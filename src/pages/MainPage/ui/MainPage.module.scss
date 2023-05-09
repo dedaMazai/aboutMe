@@ -2,6 +2,15 @@
     background-color: aqua;
 }
 
-.elem {
+.elem,
+.elemMain {
     background-color: rgb(200, 124, 124);
+}
+
+.elemMain {
+    width: 20px;
+}
+
+.block {
+    width: 600px;
 }

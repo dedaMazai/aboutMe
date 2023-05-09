@@ -18,24 +18,21 @@ const MainPage = () => {
                 feedbackTitle="Оставьте отзыв"
                 hasFeedback
             />
-            <Grid container className={cls.const}>
-                <Grid xl="12" className={cls.elem}>123</Grid>
-                <Grid className={cls.elem}>123</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>123</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-                <Grid className={cls.elem}>213</Grid>
-            </Grid>
+            <div className={cls.block}>
+                <Grid container gap="32" className={cls.const}>
+                    <Grid xl="12" xs="2" xm="1" className={cls.elem}>123</Grid>
+                    <Grid className={cls.elemMain}>
+                        <div className={cls.check}>12</div>
+                    </Grid>
+                    <Grid className={cls.elem}>213</Grid>
+                    <Grid className={cls.elem}>123</Grid>
+                    <Grid className={cls.elem}>213</Grid>
+                    <Grid className={cls.elem}>213</Grid>
+                    <Grid className={cls.elem}>213</Grid>
+                    <Grid className={cls.elem}>213</Grid>
+                    <Grid className={cls.elem}>213</Grid>
+                </Grid>
+            </div>
         </Page>
     );
 };
