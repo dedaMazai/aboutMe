@@ -3,12 +3,12 @@ import { render } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import { MemoryRouter } from 'react-router-dom';
 import { ReducersMapObject } from '@reduxjs/toolkit';
-import i18nForTests from '@/shared/config/i18/i18nForTests';
+import i18nForTests from '@/shared/config/i18n/i18nForTests';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { Theme } from '@/shared/const/theme';
-// eslint-disable-next-line andreibread-plugin/layer-imports
+// eslint-disable-next-line ulbi-tv-plugin/layer-imports
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
-// eslint-disable-next-line andreibread-plugin/layer-imports
+// eslint-disable-next-line ulbi-tv-plugin/layer-imports
 import '@/app/styles/index.scss';
 
 export interface componentRenderOptions {
@@ -34,12 +34,13 @@ export function TestProvider(props: TestProviderProps) {
 
     return (
         <MemoryRouter initialEntries={[route]}>
-            <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
+            <StoreProvider
+                asyncReducers={asyncReducers}
+                initialState={initialState}
+            >
                 <I18nextProvider i18n={i18nForTests}>
                     <ThemeProvider initialTheme={theme}>
-                        <div className={`app ${theme}`}>
-                            {children}
-                        </div>
+                        <div className={`app ${theme}`}>{children}</div>
                     </ThemeProvider>
                 </I18nextProvider>
             </StoreProvider>
@@ -47,6 +48,9 @@ export function TestProvider(props: TestProviderProps) {
     );
 }
 
-export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
+export function componentRender(
+    component: ReactNode,
+    options: componentRenderOptions = {},
+) {
     return render(<TestProvider options={options}>{component}</TestProvider>);
 }

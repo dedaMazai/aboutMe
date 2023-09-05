@@ -1,71 +1,45 @@
 /*
- * For a detailed explanation regarding each configuration property, visit:
+ * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
 
-// eslint-disable-next-line import/no-import-module-exports
 import path from 'path';
 
-module.exports = {
-    testEnvironment: 'jsdom',
-    clearMocks: true,
-    coveragePathIgnorePatterns: [
-        '\\\\node_modules\\\\',
-    ],
-    moduleFileExtensions: [
-        'js',
-        'jsx',
-        'ts',
-        'tsx',
-        'json',
-        'node',
-    ],
-    moduleDirectories: [
-        'node_modules',
-    ],
-    modulePaths: [
-        '<rootDir>src',
-    ],
-    rootDir: '../../',
-    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
-    testMatch: [
-    // Обнаружил разницу между МАК ОС и ВИНДОУС!!! эта строка будет для обоих систем
-        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-    ],
-    moduleNameMapper: {
-        '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-        '^@/(.*)$': '<rootDir>/src/$1',
-    },
+export default {
     globals: {
         __IS_DEV__: true,
         __API__: '',
         __PROJECT__: 'jest',
     },
-
-    transformIgnorePatterns: [
-        'node_modules/(?!axios)/',
+    clearMocks: true,
+    testEnvironment: 'jsdom',
+    coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
+    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
+    moduleDirectories: ['node_modules'],
+    modulePaths: ['<rootDir>src'],
+    testMatch: [
+        // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
+        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
-
+    rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '^@/(.*)$': '<rootDir>/src/$1',
+    },
     reporters: [
         'default',
-        ['jest-html-reporters', {
-            publicPath: '<rootDir>/reports/unit',
-            filename: 'report.html',
-            // openReport: true,
-            inlineSource: true,
-        }],
+        [
+            'jest-html-reporters',
+            {
+                publicPath: '<rootDir>/reports/unit',
+                filename: 'report.html',
+                // openReport: true,
+                inlineSource: true,
+            },
+        ],
     ],
-
-    // All imported modules in your tests should be mocked automatically
-    // automock: false,
-
-    // Stop running tests after `n` failures
-    // bail: 0,
-
-    // The directory where Jest should store its cached dependency information
-    // cacheDirectory: "C:\\Users\\mi\\AppData\\Local\\Temp\\jest",
-
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -97,11 +71,6 @@ module.exports = {
     // Make calling deprecated APIs throw helpful error messages
     // errorOnDeprecated: false,
 
-    // The default configuration for fake timers
-    // fakeTimers: {
-    //   "enableGlobally": false
-    // },
-
     // Force coverage collection from ignored files using an array of glob patterns
     // forceCoverageMatch: [],
 
@@ -113,6 +82,10 @@ module.exports = {
 
     // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
     // maxWorkers: "50%",
+
+    // An array of directory names to be searched recursively up from the requiring module's location
+
+    // An array of file extensions your modules use
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
@@ -147,6 +120,8 @@ module.exports = {
     // Automatically restore mock state and implementation before every test
     // restoreMocks: false,
 
+    // The root directory that Jest should scan for tests and modules within
+
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
     //   "<rootDir>"
@@ -175,6 +150,8 @@ module.exports = {
     // Adds a location field to test results
     // testLocationInResults: false,
 
+    // The glob patterns Jest uses to detect test files
+
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     // testPathIgnorePatterns: [
     //   "\\\\node_modules\\\\"
@@ -189,8 +166,20 @@ module.exports = {
     // This option allows use of a custom test runner
     // testRunner: "jest-circus/runner",
 
+    // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
+    // testURL: "http://localhost",
+
+    // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"
+    // timers: "real",
+
     // A map from regular expressions to paths to transformers
     // transform: undefined,
+
+    // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
+    // transformIgnorePatterns: [
+    //   "\\\\node_modules\\\\",
+    //   "\\.pnp\\.[^\\\\]+$"
+    // ],
 
     // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
     // unmockedModulePathPatterns: undefined,

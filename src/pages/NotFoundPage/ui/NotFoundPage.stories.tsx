@@ -1,7 +1,6 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
-
 import { NotFoundPage } from './NotFoundPage';
 import { Theme } from '@/shared/const/theme';
 
@@ -13,12 +12,13 @@ export default {
     },
 } as ComponentMeta<typeof NotFoundPage>;
 
-const Template: ComponentStory<typeof NotFoundPage> = (args) => <NotFoundPage />;
+const Template: ComponentStory<typeof NotFoundPage> = (args) => (
+    <NotFoundPage {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [ReduxDecorator({})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), ReduxDecorator({})];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

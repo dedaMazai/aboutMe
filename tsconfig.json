@@ -1,26 +1,39 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",//куда происходит сборка, у нас не важна т.к. мы собираем с помощью вебака
-        "noImplicitAny": true,//не позволяет использовать переменные без явного указания типа
-        "module": "ESNext",//модульная система
-        "target": "es5",//в какую спецификацию компилируем, для поддержки большинства браузеров
+        "outDir": "./dist/",
+        // Подсвечивает все места где не указан тип
+        // Однако это не означает, что теперь вовсе нельзя использовать any.
+        // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
+        "noImplicitAny": true,
+        "module": "ESNext",
+        // В какую спецификацию компилируем: для поддержки большинства браузеров
+        "target": "es5",
         "jsx": "react-jsx",
-        "allowJs": true,//позволяется компилятору обработать не только ts файлы но и js
-        "moduleResolution": "node",//определяется какие импорты будут (node(99% случаев) и classic)
-        "baseUrl": ".",//Для абсолютных путей
+        // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
+        "allowJs": true,
+        "strict": true,
+        "moduleResolution": "node",
+        // Для абсолютного импорта
+        "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"]
         },
-        "strict": true,
+        // esModuleInterop позволяет работать с пакетами, которые используют
+        // common js как с обычными пакета с помощью import (require() module.export) = common js
+        // import Moment from 'moment';
+        // без флага esModuleInterop результат undefined
+        // console.log(Moment);
+        // c флагом результат [object Object]
+        // console.log(Moment);
         "esModuleInterop": true,
-        //позволяет работать с пакетами, которые используют
-        //common js как с обычными пакетами с помощью import, тк (require() module.export) это common js
+        // Если какая-либо библиотека не имеет default import,
+        // лоадеры вроде ts-loader или babel-loader автоматически создают их
+        // вместо такого импорта
+        // import * as React from 'react';
+        // можно писать такой
+        // import React from 'react';
         "allowSyntheticDefaultImports": true,
-        //многие библиотеки не поддерживают дефолтный импорт, и нам приходится писать * as Library
-        //с этим флагом можно не использовать * as
         "isolatedModules": true
-        // для упрощения сборки типы и интерфейсы нужно выносить в отдельные изолированные модули
-        // (файлы только с типами и интерфейсами) при их экпорте из public api добавляем к ним type
     },
     "ts-node": {
         "compilerOptions": {
@@ -30,6 +43,6 @@
     "include": [
         "./config/jest/setupTests.ts",
         "./src/**/*.ts",
-        "./src/**/*.tsx",
-    ],
+        "./src/**/*.tsx"
+    ]
 }

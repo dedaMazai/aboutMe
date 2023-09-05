@@ -1,7 +1,7 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
-
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import MainPage from './MainPage';
 import { Theme } from '@/shared/const/theme';
 
@@ -11,14 +11,14 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof MainPage>;
 
 const Template: ComponentStory<typeof MainPage> = () => <MainPage />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [ReduxDecorator({ counter: { value: 10 } })];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), ReduxDecorator({ counter: { value: 10 } })];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

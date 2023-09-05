@@ -25,6 +25,12 @@ export function useModal({ animationDelay, isOpen, onClose }: UseModalProps) {
         ReturnType<typeof setTimeout>
     >;
 
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
+
     const close = useCallback(() => {
         if (onClose) {
             setIsClosing(true);
@@ -44,12 +50,6 @@ export function useModal({ animationDelay, isOpen, onClose }: UseModalProps) {
         },
         [close],
     );
-
-    useEffect(() => {
-        if (isOpen) {
-            setIsMounted(true);
-        }
-    }, [isOpen]);
 
     useEffect(() => {
         if (isOpen) {

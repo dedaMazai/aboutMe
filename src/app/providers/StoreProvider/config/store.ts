@@ -3,8 +3,8 @@ import { CombinedState, Reducer } from 'redux';
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api/api';
-import { scrollUiReducer } from '@/features/ScrollUi';
-import { rtqApi } from '@/shared/api/rtqApi';
+import { uiReducer } from '@/features/UI';
+import { rtkApi } from '@/shared/api/rtkApi';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
@@ -16,8 +16,8 @@ export function createReduxStore(
         ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
-        scrollUi: scrollUiReducer,
-        [rtqApi.reducerPath]: rtqApi.reducer,
+        ui: uiReducer,
+        [rtkApi.reducerPath]: rtkApi.reducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);
@@ -30,11 +30,12 @@ export function createReduxStore(
         reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
         devTools: __IS_DEV__,
         preloadedState: initialState,
-        middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-            thunk: {
-                extraArgument: extraArg,
-            },
-        }).concat(rtqApi.middleware),
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware({
+                thunk: {
+                    extraArgument: extraArg,
+                },
+            }).concat(rtkApi.middleware),
     });
 
     // @ts-ignore
@@ -43,7 +44,4 @@ export function createReduxStore(
     return store;
 }
 
-// const storeReturn = createReduxStore();
-// export type AppDispatch = typeof storeReturn.dispatch;
-// или
 export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

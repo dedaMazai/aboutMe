@@ -24,15 +24,20 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'andreibread-plugin',
+        'ulbi-tv-plugin',
         'unused-imports',
     ],
     rules: {
-        'prettier/prettier': 'error',
-        'react/no-array-index-key': 'off',
+        'unused-imports/no-unused-imports': 'error',
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
@@ -41,61 +46,79 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'no-return-await': 'off',
-        'i18next/no-literal-string': ['error', {
-            markupOnly: true,
-            ignoreAttribute: [
-                'as',
-                'role',
-                'data-testid',
-                'to', 'target',
-                'justify',
-                'align',
-                'direction',
-                'gap',
-            ],
-        }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'as',
+                    'role',
+                    'data-testid',
+                    'to',
+                    'target',
+                    'justify',
+                    'align',
+                    'border',
+                    'direction',
+                    'gap',
+                    'feature',
+                    'color',
+                    'variant',
+                    'size',
+                    'wrap',
+                ],
+            },
+        ],
         'max-len': [
-            'error', {
+            'error',
+            {
                 ignoreComments: true,
-                code: 120,
+                code: 125,
             },
         ],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error',
+        // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error',
+        // Checks effect dependencies,
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'unused-imports/no-unused-imports': 'error',
-        'andreibread-plugin/path-checker': [
+        'react/no-array-index-key': 'off',
+        'arrow-body-style': 'off',
+        'ulbi-tv-plugin/path-checker': [
             'error',
             {
                 alias: '@',
             },
         ],
-        'andreibread-plugin/public-api-imports': [
+        'ulbi-tv-plugin/layer-imports': [
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/ReduxDecorator.tsx'],
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
             },
         ],
-        'andreibread-plugin/layer-imports': [
+        'ulbi-tv-plugin/public-api-imports': [
             'error',
             {
                 alias: '@',
-                ignoreImportPatterns: ['**/testing', '**/StoreProvider'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+        'react/no-unstable-nested-components': 'warn',
     },
     globals: {
         __IS_DEV__: true,
         __API__: true,
         __PROJECT__: true,
     },
-    overrides: [// позволяет для определного типа файла переопределить правила
+    overrides: [
         {
             files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
             rules: {

@@ -1,30 +1,24 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
-import { Notification } from '../../model/types/notification';
 
 import { NotificationList } from './NotificationList';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-    title: 'entities/NotificationList',
+    title: 'entities/Notification/NotificationList',
     component: NotificationList,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof NotificationList>;
 
-const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />;
-
-const notification: Notification = {
-    id: '1',
-    title: '2231',
-    description: 'string',
-};
+const Template: ComponentStory<typeof NotificationList> = (args) => (
+    <NotificationList {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [ReduxDecorator({})];
-
+Normal.decorators = [StoreDecorator({})];
 Normal.parameters = {
     mockData: [
         {
@@ -32,9 +26,24 @@ Normal.parameters = {
             method: 'GET',
             status: 200,
             response: [
-                { ...notification, id: '1' },
-                { ...notification, id: '2' },
-                { ...notification, id: '3' },
+                {
+                    id: '1',
+                    title: 'Уведомление',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
+                },
+                {
+                    id: '2',
+                    title: 'Уведомление 2',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
+                },
+                {
+                    id: '3',
+                    title: 'Уведомление 3',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
+                },
             ],
         },
     ],

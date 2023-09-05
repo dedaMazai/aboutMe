@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Article } from '@/entities/Article';
-import { ReduxDecorator } from '@/shared/config/storybook/ReduxDecorator/ReduxDecorator';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 
 export default {
@@ -13,7 +13,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 
-const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <ArticleRecommendationsList {...args} />;
+const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
+    <ArticleRecommendationsList {...args} />
+);
 
 const article: Article = {
     id: '1',
@@ -29,7 +31,7 @@ const article: Article = {
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [ReduxDecorator({})];
+Normal.decorators = [StoreDecorator({})];
 Normal.parameters = {
     mockData: [
         {
